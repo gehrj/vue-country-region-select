@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import countrySelect from '@/components/countrySelect'
-import regionSelect from '@/components/regionSelect'
+import countrySelect from '@/components/countrySelect.vue'
+import regionSelect from '@/components/regionSelect.vue'
 
 const components = { countrySelect, regionSelect }
 
