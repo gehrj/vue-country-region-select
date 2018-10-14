@@ -5,6 +5,12 @@ Vue-Country-Region-Select provides a pair of Vue components that will allow you 
 ## Installation
 `npm install vue-country-region-select --save`
 
+## Dependencies 
+Being that these are Vue components you will need to use them inside of Vue.
+
+The Data for the countries and regions are being used from the country-region-data npm package.
+It can be found here: https://www.npmjs.com/package/country-region-data
+
 ## Usage
 Here is a sample use case of how you would use vue-country-region-select in your vue project. You can alternatively store the data in a store somewhere. Country and Region values will be returned in their short code values. 
 
