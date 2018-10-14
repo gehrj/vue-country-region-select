@@ -1,7 +1,36 @@
 {
   "name": "vue-country-region-select",
   "version": "0.1.0",
-  "private": true,
+  "description": "A Country select component and Region select component for Vue.js. Work together and standalone.",
+  "repository": "https://github.com/gehrj/vue-country-region-select",
+  "license": "MIT",
+  "keywords": [
+    "vue-country-region-select",
+    "vue-country-state-select",
+    "vue country select",
+    "vue region select",
+    "vue",
+    "select",
+    "country",
+    "region",
+    "vue component",
+    "component",
+    "country select",
+    "region select",
+    "lightweight",
+    "state select",
+    "state",
+    "vue state select",
+    "country dropdown",
+    "dropdown",
+    "region dropdown",
+    "state dropdown",
+    "vue-country-region-dropdown",
+    "vue-country-state-dropdown",
+    "vue dropdown component",
+    "country and state select"
+  ],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,6 +40,14 @@
     "lint": "vue-cli-service lint",
     "e2e:open": "vue-cli-service e2e:open"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "main": "vueCountryRegionSelect.common.js",
   "dependencies": {
     "country-region-data": "^1.4.4",
     "vue": "^2.5.17"
