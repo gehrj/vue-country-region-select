@@ -4,9 +4,6 @@
 </template>
 
 <script>
-import countrySelect from '@/components/country-select'
-import regionSelect from '@/components/region-select'
-export { countrySelect, regionSelect }
 export default {
   name: 'app',
 }
