@@ -31,7 +31,7 @@
       }
     },
     watch: {
-      country(oldVal, newVal) {
+      country() {
         if (this.alreadyMounted) { this.onChange('') }
         if (this.country) {
           this.getRegionWithCountry()
