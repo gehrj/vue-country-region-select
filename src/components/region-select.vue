@@ -12,8 +12,9 @@
       if (this.country) {
         this.getRegionWithCountry()
       } else {
+        const findRegion = this.defaultRegion ? this.defaultRegion : 'US'
         const regionObject = regions.find((elem) => {
-          return elem.countryShortCode === this.defaultRegion || 'US'
+          return elem.countryShortCode === findRegion
         })
         this.shownRegions = regionObject.regions.map((elem) => elem)
       }
