@@ -15,12 +15,13 @@ It can be found here: https://www.npmjs.com/package/country-region-data
 Here is a sample use case of how you would use vue-country-region-select in your vue project. You can alternatively store the data in a store somewhere. Country and Region values will be returned in their short code values. 
 
 Ex. country: 'US' and region: 'IL'
+
+The library registers the components globally so only need to import the library once in order to make the components be available throughout your project.
 ```javascript
 import Vue from 'vue'
-import { countrySelect, regionSelect } from 'vue-country-region-select'
+import 'vue-country-region-select'
 
 export default Vue.extend({
-  components: { countrySelect, regionSelect},
   data: () => ({
     country: '',
     region: ''
