@@ -4,12 +4,19 @@
 
   export default Vue.extend({
     name: 'CountrySelect',
-    props: ['country', 'topCountry'],
+    props: ['country', 'topCountry', 'countryName'],
     computed: {
       countries() {
         return regions.filter((region) => {
-          return region.countryShortCode !== this.topCountry
+          if (this.countryName) {
+            return region.countryName !== this.topCountry
+          } else {
+            return region.countryShortCode !== this.topCountry
+          }
         })
+      },
+      valueType() {
+        return this.countryName ? 'countryName' : 'countryShortCode'
       }
     },
     methods: {
@@ -18,7 +25,11 @@
       },
       topCountryName() {
           const regionObj = regions.find((region) => {
-              return region.countryShortCode === this.topCountry
+              if (this.countryName) {
+                return region.countryName === this.topCountry
+              } else {
+                return region.countryShortCode === this.topCountry
+              }
           })
           return regionObj.countryName
       }
@@ -30,6 +41,6 @@
   <select @change="onChange($event.target.value)">
     <option value="">Select Country</option>
     <option v-if="topCountry" :value="topCountry" :selected="country === topCountry">{{topCountryName()}}</option>
-    <option v-for="(region, index) in countries" :value="region.countryShortCode" :selected="country === region.countryShortCode" :key="index">{{region.countryName}}</option>
+    <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{region.countryName}}</option>
   </select>
 </template>
