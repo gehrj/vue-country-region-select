@@ -1,40 +1,40 @@
 <script>
-  import Vue from 'vue'
-  import regions from 'country-region-data'
+import Vue from 'vue'
+import regions from 'country-region-data'
 
-  export default Vue.extend({
-    name: 'CountrySelect',
-    props: ['country', 'topCountry', 'countryName'],
-    computed: {
-      countries() {
-        return regions.filter((region) => {
-          if (this.countryName) {
-            return region.countryName !== this.topCountry
-          } else {
-            return region.countryShortCode !== this.topCountry
-          }
-        })
-      },
-      valueType() {
-        return this.countryName ? 'countryName' : 'countryShortCode'
-      }
+export default Vue.extend({
+  name: 'CountrySelect',
+  props: ['country', 'topCountry', 'countryName'],
+  computed: {
+    countries() {
+      return regions.filter((region) => {
+        if (this.countryName) {
+          return region.countryName !== this.topCountry
+        } else {
+          return region.countryShortCode !== this.topCountry
+        }
+      })
     },
-    methods: {
-      onChange(country) {
-        this.$emit('input', country)
-      },
-      topCountryName() {
-          const regionObj = regions.find((region) => {
-              if (this.countryName) {
-                return region.countryName === this.topCountry
-              } else {
-                return region.countryShortCode === this.topCountry
-              }
-          })
-          return regionObj.countryName
-      }
+    valueType() {
+      return this.countryName ? 'countryName' : 'countryShortCode'
     }
-  })
+  },
+  methods: {
+    onChange(country) {
+      this.$emit('input', country)
+    },
+    topCountryName() {
+      const regionObj = regions.find((region) => {
+          if (this.countryName) {
+            return region.countryName === this.topCountry
+          } else {
+            return region.countryShortCode === this.topCountry
+          }
+      })
+      return regionObj.countryName
+    }
+  }
+})
 </script>
 
 <template>
