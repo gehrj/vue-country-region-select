@@ -2,7 +2,7 @@
 import regions from 'country-region-data'
 export default {
   name: 'RegionSelect',
-  props: ['country', 'region', 'defaultRegion', 'countryName'],
+  props: ['country', 'region', 'defaultRegion', 'countryName', 'copiedCountry'],
   data: () => ({
     shownRegions: [],
     regions,
@@ -46,10 +46,8 @@ export default {
   },
   watch: {
     country(newVal, oldVal) {
-      if (this.alreadyMounted) { 
-        if(oldVal !== '') {
-          this.onChange('') 
-        }
+      if (this.alreadyMounted && oldVal !== '' && this.copiedCountry !== newVal) {
+        this.onChange('') 
       }
       if (this.country) {
         this.getRegionWithCountry()

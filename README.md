@@ -57,6 +57,7 @@ region | yes | '' | string | Make this tied to the same piece of data as v-model
 country | no | '' | string | This tells the component what country to grab the list of displayed regions from. To have it work in tandem with country component provide it the variable that is tied to the v-model of the country-select component.
 defaultRegion | no | 'US' | string | This allows you to set a default region when choosing not to use the country attribute. It will be set to regions of the United States if not provided.
 countryName | no | false | boolean | Set this to true if you are setting it to true while using Country Select. This is just to help keep the data values in sync.
+copiedCountry | no | '' | string | Setting a country value here will cause region to not reset when it is switched via any method in which this kind of event may occur.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
