@@ -2,11 +2,10 @@
 import regions from 'country-region-data'
 export default {
   name: 'RegionSelect',
-  props: ['country', 'region', 'defaultRegion', 'countryName', 'copiedCountry'],
+  props: ['country', 'region', 'defaultRegion', 'countryName'],
   data: () => ({
     shownRegions: [],
     regions,
-    alreadyMounted: false
   }),
   mounted() {
     if (this.country) {
@@ -27,7 +26,6 @@ export default {
       })
       this.shownRegions = regionObject.regions.map((elem) => elem)
     }
-    this.alreadyMounted = true
   },
   methods: {
     onChange(region) {
@@ -46,9 +44,7 @@ export default {
   },
   watch: {
     country(newVal, oldVal) {
-      if(this.alreadyMounted && this.copiedCountry && this.copiedCountry !== newVal) {
-        this.onChange('')
-      } else if (!this.copiedCountry && this.alreadyMounted && oldVal !== '') {
+      if (oldVal !== '') {
         this.onChange('')
       }
       if (this.country) {
@@ -56,7 +52,6 @@ export default {
       } else {
         this.shownRegions = []
       }
-      this.alreadyMounted = true
     }
   }
 }
