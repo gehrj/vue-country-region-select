@@ -46,8 +46,10 @@ export default {
   },
   watch: {
     country(newVal, oldVal) {
-      if (this.alreadyMounted && oldVal !== '' && this.copiedCountry !== newVal) {
-        this.onChange('') 
+      if(this.alreadyMounted && this.copiedCountry && this.copiedCountry !== newVal) {
+        this.onChange('')
+      } else if (!this.copiedCountry && this.alreadyMounted && oldVal !== '') {
+        this.onChange('')
       }
       if (this.country) {
         this.getRegionWithCountry()
