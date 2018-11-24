@@ -7,6 +7,7 @@ export default Vue.extend({
   props: ['country', 'topCountry', 'countryName'],
   computed: {
     countries() {
+      // dont return right away set to variable and then filter again with passed in array of available countries (for setting available countries via prop)
       return regions.filter((region) => {
         if (this.countryName) {
           return region.countryName !== this.topCountry
