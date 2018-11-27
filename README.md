@@ -47,6 +47,8 @@ v-model | yes | ''| string | The data binding for your component
 country | yes | '' | string | Make this tied to the same piece of data as v-model
 topCountry | no | '' | string | By providing this value you will tell component what country to put at the top of the dropdown list for easy selection. Make sure to use country short code. So for United states you would provide 'US'. However, if you set countryName to true make sure to also write out full country name when setting a topCountry. In this scenerio United States would be 'United States'.
 countryName | no | false | boolean | By setting this value to true, country names will be output in full instead of using the abbreviated short codes. Make sure to set this true for both country and region if you are using.
+whiteList | no | [] | array | Fill this array with capitalized short codes of the countries you want to appear in the dropdown list. ex: ['US', 'CA', 'MX']
+blackList | no | [] | array | Fill this array with capitalized short codes of the countries you want to remove from dropdown list. ex: ['US'] 
 
 ```<region-select /> ```
 

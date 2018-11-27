@@ -4,17 +4,27 @@ import regions from 'country-region-data'
 
 export default Vue.extend({
   name: 'CountrySelect',
-  props: ['country', 'topCountry', 'countryName'],
+  props: ['country', 'topCountry', 'countryName', 'whiteList', 'blackList'],
   computed: {
     countries() {
-      // dont return right away set to variable and then filter again with passed in array of available countries (for setting available countries via prop)
-      return regions.filter((region) => {
+      let countryList = regions.filter((region) => {
         if (this.countryName) {
           return region.countryName !== this.topCountry
         } else {
           return region.countryShortCode !== this.topCountry
         }
       })
+      if (this.whiteList) {
+        countryList = countryList.filter((country) => {
+          return this.whiteList.includes(country.countryShortCode)
+        })
+      }
+      if (this.blackList) {
+        countryList = countryList.filter((country) => {
+          return !this.blackList.includes(country.countryShortCode)
+        })
+      }
+      return countryList
     },
     valueType() {
       return this.countryName ? 'countryName' : 'countryShortCode'

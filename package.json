@@ -1,6 +1,6 @@
 {
   "name": "vue-country-region-select",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "A Country select component and Region select component for Vue.js. Work together and standalone.",
   "repository": "https://github.com/gehrj/vue-country-region-select",
   "author": "Justin Gehr <gehrjay@gmail.com>",
