@@ -2,7 +2,7 @@
   import regions from 'country-region-data'
   export default {
     name: 'RegionSelect',
-    props: ['country', 'region', 'defaultRegion', 'countryName', 'regionName', 'class'],
+    props: ['country', 'region', 'defaultRegion', 'countryName', 'regionName', 'className'],
     data: () => ({
       shownRegions: [],
       regions,
@@ -63,7 +63,7 @@
 </script>
 
 <template>
-  <select @change="onChange($event.target.value)" class="class">
+  <select @change="onChange($event.target.value)" :class="className">
     <option value="">Select Region</option>
     <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{place.name}}</option>
   </select>

@@ -4,7 +4,7 @@
 
   export default Vue.extend({
     name: 'CountrySelect',
-    props: ['country', 'topCountry', 'countryName', 'whiteList', 'blackList', 'class'],
+    props: ['country', 'topCountry', 'countryName', 'whiteList', 'blackList', 'className'],
     computed: {
       countries() {
         let countryList = regions.filter((region) => {
@@ -49,7 +49,7 @@
 </script>
 
 <template>
-  <select @change="onChange($event.target.value)" class="class">
+  <select @change="onChange($event.target.value)" :class="className">
     <option value="">Select Country</option>
     <option v-if="topCountry" :value="topCountry" :selected="country === topCountry">{{topCountryName()}}</option>
     <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{region.countryName}}</option>
