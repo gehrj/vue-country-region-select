@@ -1,8 +1,7 @@
 <script>
-  import Vue from 'vue'
   import regions from 'country-region-data'
 
-  export default Vue.extend({
+  export default {
     name: 'CountrySelect',
     props: ['country', 'topCountry', 'countryName', 'whiteList', 'blackList', 'className'],
     computed: {
@@ -45,7 +44,7 @@
         return regionObj.countryName
       }
     }
-  })
+  }
 </script>
 
 <template>
