@@ -11,4 +11,4 @@ const install = function (Vue) {
 const VueCountryRegionSelect = { CountrySelect, RegionSelect, install }
 
 export default VueCountryRegionSelect
-export { CountrySelect, RegionSelect, install }
+export { CountrySelect, RegionSelect }

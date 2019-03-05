@@ -21,7 +21,8 @@ There is a prop that will allow for country to be returned in full instead of in
 The library registers the components globally so only need to import the library once in order to make the components be available throughout your project.
 ```javascript
 import Vue from 'vue'
-import 'vue-country-region-select'
+import vueCountryRegionSelect from 'vue-country-region-select'
+Vue.use(vueCountryRegionSelect)
 
 export default Vue.extend({
   data: () => ({
