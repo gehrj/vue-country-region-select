@@ -1,11 +1,14 @@
-import Vue from 'vue'
-import countrySelect from '@/components/country-select.vue'
-import regionSelect from '@/components/region-select.vue'
+import CountrySelect from '@/components/country-select.vue'
+import RegionSelect from '@/components/region-select.vue'
 
-const components = { countrySelect, regionSelect }
+const install = function (Vue) {
+    const components = { CountrySelect, RegionSelect }
+    Object.keys(components).forEach(name => {
+        Vue.component(name, components[name])
+    })
+}
 
-Object.keys(components).forEach(name => {
-    Vue.component(name, components[name])
-})
+const VueCountryRegionSelect = { CountrySelect, RegionSelect, install }
 
-export default components
+export default VueCountryRegionSelect
+export { CountrySelect, RegionSelect, install }
