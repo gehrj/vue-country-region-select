@@ -9,6 +9,7 @@
 import CountrySelect from '@/components/country-select'
 import RegionSelect from '@/components/region-select'
 
+// ***** For demo testing only *****
 export default {
   name: 'app',
   components: {
