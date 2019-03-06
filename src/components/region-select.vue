@@ -2,7 +2,18 @@
   import regions from 'country-region-data'
   export default {
     name: 'RegionSelect',
-    props: ['country', 'region', 'defaultRegion', 'countryName', 'regionName', 'className'],
+    props: {
+      country: String,
+      region: String,
+      defaultRegion: String,
+      countryName: String,
+      regionName: String,
+      className: String,
+      placeholder: {
+        type: String,
+        default: 'Select Region'
+      }
+    },
     data: () => ({
       shownRegions: [],
       regions,
@@ -17,14 +28,7 @@
         } else {
           findRegion = this.defaultRegion ? this.defaultRegion : 'US'
         }
-        const regionObject = regions.find((elem) => {
-          if (this.countryName) {
-            return elem.countryName === findRegion
-          } else {
-            return elem.countryShortCode === findRegion
-          }
-        })
-        this.shownRegions = regionObject.regions.map((elem) => elem)
+        this.getRegionWithCountry(findRegion)
       }
     },
     computed: {
@@ -36,15 +40,26 @@
       onChange(region) {
         this.$emit('input', region)
       },
-      getRegionWithCountry() {
-        const regionObject = regions.find((elem) => {
+      getRegionWithCountry(country) {
+        country = country || this.country
+        let countryRegions = regions.find((elem) => {
           if (this.countryName) {
-            return elem.countryName === this.country
+            return elem.countryName === country
           } else {
-            return elem.countryShortCode === this.country
+            return elem.countryShortCode === country
           }
-        })
-        this.shownRegions = regionObject.regions.map((elem) => elem)
+        }).regions
+        if (this.$i18n) {
+          countryRegions = countryRegions.map((region) => {
+            let localeRegion = Object.assign({ }, region)
+            localeRegion.name = this.$t(region.name)
+            return localeRegion
+          })
+          countryRegions.sort((region1, region2) => {
+            return (region1.name > region2.name) ? 1 : -1
+          })
+        }
+        this.shownRegions = countryRegions
       }
     },
     watch: {
@@ -64,7 +79,7 @@
 
 <template>
   <select @change="onChange($event.target.value)" :class="className">
-    <option value="">Select Region</option>
+    <option value="">{{ placeholder }}</option>
     <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{place.name}}</option>
   </select>
 </template>
