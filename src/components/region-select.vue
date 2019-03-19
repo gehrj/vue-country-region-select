@@ -6,8 +6,8 @@
       country: String,
       region: String,
       defaultRegion: String,
-      countryName: String,
-      regionName: String,
+      countryName: Boolean,
+      regionName: Boolean,
       className: String,
       placeholder: {
         type: String,

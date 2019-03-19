@@ -6,7 +6,7 @@
     props: {
       country: String,
       topCountry: String,
-      countryName: String,
+      countryName: Boolean,
       whiteList: Array,
       blackList: Array,
       className: String,
