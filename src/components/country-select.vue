@@ -19,9 +19,9 @@
       countries() {
         let countryList = regions.filter((region) => {
           if (this.countryName) {
-            return region.countryName !== this.topCountry
+            return region.countryName !== this.firstCountry
           } else {
-            return region.countryShortCode !== this.topCountry
+            return region.countryShortCode !== this.firstCountry
           }
         })
         if (this.whiteList) {
@@ -46,6 +46,22 @@
         }
         return countryList
       },
+      firstCountry() {
+        if(this.countryName) {
+          if(this.topCountry.length === 2 ) {
+            const regionObj = regions.find((region) => {
+              return region.countryShortCode === this.topCountry
+            })
+            return regionObj.countryName
+          } else {
+            return this.topCountry
+          }
+        }
+        if (this.topCountry) {
+          return this.topCountry
+        }
+        return ''
+      },
       valueType() {
         return this.countryName ? 'countryName' : 'countryShortCode'
       }
@@ -57,9 +73,9 @@
       topCountryName() {
         const regionObj = regions.find((region) => {
           if (this.countryName) {
-            return region.countryName === this.topCountry
+            return region.countryName === this.firstCountry
           } else {
-            return region.countryShortCode === this.topCountry
+            return region.countryShortCode === this.firstCountry
           }
         })
         if (this.$i18n) {
@@ -74,7 +90,7 @@
 <template>
   <select @change="onChange($event.target.value)" :class="className">
     <option value="">{{ placeholder }}</option>
-    <option v-if="topCountry" :value="topCountry" :selected="country === topCountry">{{topCountryName()}}</option>
+    <option v-if="topCountry" :value="firstCountry" :selected="country === firstCountry">{{topCountryName()}}</option>
     <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{region.countryName}}</option>
   </select>
 </template>
