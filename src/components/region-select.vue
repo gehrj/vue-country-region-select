@@ -9,6 +9,7 @@
       countryName: Boolean,
       regionName: Boolean,
       className: String,
+      shortCodeDropdown: Boolean,
       placeholder: {
         type: String,
         default: 'Select Region'
@@ -86,6 +87,6 @@
 <template>
   <select @change="onChange($event.target.value)" :class="className">
     <option value="">{{ placeholder }}</option>
-    <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{place.name}}</option>
+    <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{shortCodeDropdown ? place.shortCode : place.name}}</option>
   </select>
 </template>

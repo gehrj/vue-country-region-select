@@ -10,6 +10,7 @@
       whiteList: Array,
       blackList: Array,
       className: String,
+      shortCodeDropdown: Boolean,
       placeholder: {
         type: String,
         default: 'Select Country'
@@ -87,7 +88,7 @@
         if (this.$i18n) {
           return this.$t(regionObj.countryName)
         }
-        return regionObj.countryName
+        return this.shortCodeDropdown ? regionObj.countryShortCode : regionObj.countryName
       }
     }
   }
@@ -97,6 +98,6 @@
   <select @change="onChange($event.target.value)" :class="className">
     <option value="">{{ placeholder }}</option>
     <option v-if="topCountry" :value="firstCountry" :selected="country === firstCountry">{{topCountryName()}}</option>
-    <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{region.countryName}}</option>
+    <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{ shortCodeDropdown ? region.countryShortCode : region.countryName }}</option>
   </select>
 </template>

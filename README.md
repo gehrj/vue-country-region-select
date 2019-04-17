@@ -52,6 +52,7 @@ whiteList | no | [] | array | Fill this array with capitalized short codes of th
 blackList | no | [] | array | Fill this array with capitalized short codes of the countries you want to remove from dropdown list. ex: ['US'] 
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Country' | string | The placeholder text for country select
+shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 
 ```<region-select /> ```
 
@@ -65,6 +66,7 @@ countryName | no | false | boolean | Set this to true if you are setting it to t
 regionName | no | false | boolean | Set this to true if you want the v-model to output full region names instead of the default abbreviations.
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Region' | string | The placeholder text for region select
+shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
