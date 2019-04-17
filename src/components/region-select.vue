@@ -32,6 +32,12 @@
       }
     },
     computed: {
+      name() {
+        return this.name
+      },
+      value() {
+        return this.region
+      },
       valueType() {
         return this.regionName ? 'name' : 'shortCode'
       }

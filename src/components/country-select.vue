@@ -62,6 +62,12 @@
         }
         return ''
       },
+      name() {
+        return this.name
+      },
+      value() {
+        return this.country
+      },
       valueType() {
         return this.countryName ? 'countryName' : 'countryShortCode'
       }
