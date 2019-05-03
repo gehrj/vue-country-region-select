@@ -15,7 +15,7 @@
         type: String,
         default: 'Select Country'
       },
-      use188n: {
+      usei18n: {
         type: Boolean,
         default: true
       }
@@ -39,7 +39,7 @@
             return !this.blackList.includes(country.countryShortCode)
           })
         }
-        if (this.$i18n && this.use188n) {
+        if (this.$i18n && this.usei18n) {
           countryList = countryList.map((country) => {
             let localeCountry = Object.assign({ }, country)
             localeCountry.countryName = this.$t(country.countryName)
@@ -89,7 +89,7 @@
             return region.countryShortCode === this.firstCountry
           }
         })
-        if (this.$i18n && this.use188n) {
+        if (this.$i18n && this.usei18n) {
           return this.$t(regionObj.countryName)
         }
         return this.shortCodeDropdown ? regionObj.countryShortCode : regionObj.countryName

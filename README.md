@@ -53,7 +53,7 @@ blackList | no | [] | array | Fill this array with capitalized short codes of th
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Country' | string | The placeholder text for country select
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
-use188n | no | true | boolean | Set to false if using 188n and want to disable for this component
+usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
 
 ```<region-select /> ```
 
@@ -68,7 +68,7 @@ regionName | no | false | boolean | Set this to true if you want the v-model to 
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Region' | string | The placeholder text for region select
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
-use188n | no | true | boolean | Set to false if using 188n and want to disable for this component
+usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

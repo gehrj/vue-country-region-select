@@ -14,7 +14,7 @@
         type: String,
         default: 'Select Region'
       },
-      use188n: {
+      usei18n: {
         type: Boolean,
         default: true
       }
@@ -60,7 +60,7 @@
             return elem.countryShortCode === country
           }
         }).regions
-        if (this.$i18n && this.use188n) {
+        if (this.$i18n && this.usei18n) {
           countryRegions = countryRegions.map((region) => {
             let localeRegion = Object.assign({ }, region)
             localeRegion.name = this.$t(region.name)
