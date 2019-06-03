@@ -1,6 +1,6 @@
 {
   "name": "vue-country-region-select",
-  "version": "2.0.6",
+  "version": "2.0.10",
   "description": "A Country select component and Region select component for Vue.js. Work together and standalone.",
   "repository": "https://github.com/gehrj/vue-country-region-select",
   "author": "Justin Gehr <gehrjay@gmail.com>",
@@ -42,15 +42,10 @@
     "e2e:open": "vue-cli-service e2e:open"
   },
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist/vueCountryRegionSelect.umd.min.js"
   ],
-  "main": "./dist/vueCountryRegionSelect.common.js",
+  "main": "./dist/vueCountryRegionSelect.umd.min.js",
   "dependencies": {
-    "country-region-data": "^1.4.4",
     "vue": "^2.5.17"
   },
   "devDependencies": {

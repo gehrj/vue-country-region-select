@@ -1,5 +1,5 @@
 <script>
-  import regions from 'country-region-data'
+  import regions from '@/data.js'
 
   export default {
     name: 'CountrySelect',
