@@ -15259,6 +15259,10 @@ export default [
           "shortCode": "AB"
         },
         {
+          "name": "Uppsala lan",
+          "shortCode": "U"
+        },
+        {
           "name": "Varmlands",
           "shortCode": "S"
         },
