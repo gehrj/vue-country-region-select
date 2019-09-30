@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <country-select v-model="country" :country="country" topCountry="US" />
-    <region-select v-model="region" :country="country" :region="region" />
+    {{"country: " + country}}
+    <country-select v-model="country" :country="country" topCountry="United Kingdom" :countryName="true" />
+    {{"region: " + region}}
+    <region-select v-model="region" :country="country" :region="region" :countryName="true" :regionName="true" />
   </div>
 </template>
 
@@ -17,8 +19,8 @@ export default {
     RegionSelect
   },
   data: () => ({
-    country: '',
-    region: ''
+    country: 'United Kingdom',
+    region: 'West Lothian (Linlithgowshire)'
   })
 }
 </script>
