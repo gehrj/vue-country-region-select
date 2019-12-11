@@ -20,10 +20,15 @@ There is a prop that will allow for country to be returned in full instead of in
 
 The library registers the components globally so only need to import the library once in order to make the components be available throughout your project.
 ```javascript
+// too be added before mounting app
 import Vue from 'vue'
 import vueCountryRegionSelect from 'vue-country-region-select'
 Vue.use(vueCountryRegionSelect)
 
+new Vue({}).$mount('#app')
+// end mounting app
+
+// then inside your vue components
 export default Vue.extend({
   data: () => ({
     country: '',
