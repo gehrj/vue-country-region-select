@@ -59,6 +59,7 @@ className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Country' | string | The placeholder text for country select
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
+disablePlaceholder | no | false | boolean | Set to true to make placeholder non-selectable
 
 ```<region-select /> ```
 
@@ -74,6 +75,7 @@ className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Region' | string | The placeholder text for region select
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
+disablePlaceholder | no | false | boolean | Set to true to make placeholder non-selectable, this will cause regions to set to first available when switching countries
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

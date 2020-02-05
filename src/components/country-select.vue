@@ -15,6 +15,10 @@
         type: String,
         default: 'Select Country'
       },
+      disablePlaceholder: {
+        type: Boolean,
+        default: false
+      },
       usei18n: {
         type: Boolean,
         default: true
@@ -100,7 +104,8 @@
 
 <template>
   <select @change="onChange($event.target.value)" :class="className">
-    <option value="">{{ placeholder }}</option>
+    <option value="" v-if="!disablePlaceholder">{{ placeholder }}</option>
+    <option value="" v-else disabled selected>{{ placeholder }}</option>
     <option v-if="topCountry" :value="firstCountry" :selected="country === firstCountry">{{topCountryName()}}</option>
     <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{ shortCodeDropdown ? region.countryShortCode : region.countryName }}</option>
   </select>
