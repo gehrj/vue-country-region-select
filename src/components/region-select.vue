@@ -18,6 +18,10 @@
         type: Boolean,
         default: false
       },
+      removePlaceholder: {
+        type: Boolean,
+        default: false
+      },
       usei18n: {
         type: Boolean,
         default: true
@@ -79,6 +83,9 @@
         if (this.disablePlaceholder && this.ran) {
           this.onChange(this.shownRegions[0][this.valueType])
         }
+        if (this.removePlaceholder) {
+          this.onChange(this.shownRegions[0][this.valueType])
+        }
         this.ran = true
       }
     },
@@ -99,8 +106,8 @@
 
 <template>
   <select @change="onChange($event.target.value)" :class="className">
-    <option v-if="!disablePlaceholder" value="">{{ placeholder }}</option>
-    <option v-else value="" disabled selected>{{ placeholder }}</option>
+    <option v-if="!disablePlaceholder && !removePlaceholder" value="">{{ placeholder }}</option>
+    <option v-if="disablePlaceholder && !removePlaceholder" value="" disabled selected>{{ placeholder }}</option>
     <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{shortCodeDropdown ? place.shortCode : place.name}}</option>
   </select>
 </template>

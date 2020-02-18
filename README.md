@@ -60,6 +60,7 @@ placeholder | no | 'Select Country' | string | The placeholder text for country 
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
 disablePlaceholder | no | false | boolean | Set to true to make placeholder non-selectable
+removePlaceholder | no | false | boolean | Set to true to remove placeholder all together, this will autoselect first in list automatically
 
 ```<region-select /> ```
 
@@ -76,6 +77,8 @@ placeholder | no | 'Select Region' | string | The placeholder text for region se
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
 disablePlaceholder | no | false | boolean | Set to true to make placeholder non-selectable, this will cause regions to set to first available when switching countries
+removePlaceholder | no | false | boolean | Set to true to remove placeholder all together, this will autoselect first in list automatically
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

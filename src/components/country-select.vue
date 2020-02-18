@@ -5,12 +5,15 @@
     name: 'CountrySelect',
     props: {
       country: String,
-      topCountry: String,
       countryName: Boolean,
       whiteList: Array,
       blackList: Array,
       className: String,
       shortCodeDropdown: Boolean,
+      topCountry: {
+        type: String,
+        default: ""
+      },
       placeholder: {
         type: String,
         default: 'Select Country'
@@ -19,11 +22,18 @@
         type: Boolean,
         default: false
       },
+      removePlaceholder: {
+        type: Boolean,
+        default: false
+      },
       usei18n: {
         type: Boolean,
         default: true
       }
     },
+    data: () => ({
+      ran: false
+    }),
     computed: {
       countries() {
         let countryList = regions.filter((region) => {
@@ -52,6 +62,10 @@
           countryList.sort((country1, country2) => {
             return (country1.countryName > country2.countryName) ? 1 : -1
           })
+        }
+        if (this.removePlaceholder) {
+          let c = this.firstCountry || countryList[0][this.valueType]
+          this.onChange(c)
         }
         return countryList
       },
@@ -104,8 +118,8 @@
 
 <template>
   <select @change="onChange($event.target.value)" :class="className">
-    <option value="" v-if="!disablePlaceholder">{{ placeholder }}</option>
-    <option value="" v-else disabled selected>{{ placeholder }}</option>
+    <option value="" v-if="!disablePlaceholder && !removePlaceholder">{{ placeholder }}</option>
+    <option value="" v-if="disablePlaceholder && !removePlaceholder" disabled selected>{{ placeholder }}</option>
     <option v-if="topCountry" :value="firstCountry" :selected="country === firstCountry">{{topCountryName()}}</option>
     <option v-for="(region, index) in countries" :value="region[valueType]" :selected="country === region[valueType]" :key="index">{{ shortCodeDropdown ? region.countryShortCode : region.countryName }}</option>
   </select>
