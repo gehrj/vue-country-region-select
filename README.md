@@ -72,6 +72,8 @@ country | no | '' | string | This tells the component what country to grab the l
 defaultRegion | no | 'US' | string | This allows you to set a default region when choosing not to use the country attribute. It will be set to regions of the United States if not provided.
 countryName | no | false | boolean | Set this to true if you are setting it to true while using Country Select. This is just to help keep the data values in sync.
 regionName | no | false | boolean | Set this to true if you want the v-model to output full region names instead of the default abbreviations.
+whiteList | no | [] | array | Fill this array with capitalized short codes of the regions you want to appear in the dropdown list. ex: ['AL', 'AK', 'WA']
+blackList | no | [] | array | Fill this array with capitalized short codes of the regions you want to remove from dropdown list. ex: ['AZ'] 
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Region' | string | The placeholder text for region select
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
