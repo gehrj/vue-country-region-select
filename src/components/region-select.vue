@@ -10,6 +10,7 @@
       regionName: Boolean,
       className: String,
       shortCodeDropdown: Boolean,
+      autocomplete: Boolean,
       placeholder: {
         type: String,
         default: 'Select Region'
@@ -54,6 +55,9 @@
       },
       valueType() {
         return this.regionName ? 'name' : 'shortCode'
+      },
+      autocompleteAttr() {
+        return this.autocomplete ? "address-level1" : "off";
       }
     },
     methods: {
@@ -105,7 +109,7 @@
 </script>
 
 <template>
-  <select @change="onChange($event.target.value)" :class="className">
+  <select @change="onChange($event.target.value)" :class="className" :autocomplete="autocompleteAttr">
     <option v-if="!disablePlaceholder && !removePlaceholder" value="">{{ placeholder }}</option>
     <option v-if="disablePlaceholder && !removePlaceholder" value="" disabled selected>{{ placeholder }}</option>
     <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{shortCodeDropdown ? place.shortCode : place.name}}</option>
