@@ -57,6 +57,7 @@ whiteList | no | [] | array | Fill this array with capitalized short codes of th
 blackList | no | [] | array | Fill this array with capitalized short codes of the countries you want to remove from dropdown list. ex: ['US'] 
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Country' | string | The placeholder text for country select
+autocomplete | no | false | boolean | Set to true to enable browser to automatically fill out the country.
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
 disablePlaceholder | no | false | boolean | Set to true to make placeholder non-selectable
@@ -74,6 +75,7 @@ countryName | no | false | boolean | Set this to true if you are setting it to t
 regionName | no | false | boolean | Set this to true if you want the v-model to output full region names instead of the default abbreviations.
 className | no | '' | string | Class name ex: `form-control`
 placeholder | no | 'Select Region' | string | The placeholder text for region select
+autocomplete | no | false | boolean | Set to true to enable browser to automatically fill out the region.
 shortCodeDropdown | no | false | boolean | Use this to have dropdown text display as short codes
 usei18n | no | true | boolean | Set to false if using i18n and want to disable for this component
 disablePlaceholder | no | false | boolean | Set to true to make placeholder non-selectable, this will cause regions to set to first available when switching countries
