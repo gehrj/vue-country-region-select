@@ -6011,6 +6011,10 @@ export default [
         "shortCode": "KL"
       },
       {
+        "name": 'Ladakh',
+        "shortCode": "LA"
+      },
+      {
         "name": "Lakshadweep",
         "shortCode": "LD"
       },
