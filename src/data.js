@@ -12265,223 +12265,296 @@ export default [
     "countryShortCode": "PR",
     "regions": [
       {
-        "name": "Adjuntas"
+        "name": "Adjuntas",
+        "shortCode": "AD"
       },
       {
-        "name": "Aguada"
+        "name": "Aguada",
+        "shortCode": "AG"
       },
       {
-        "name": "Aguadilla"
+        "name": "Aguadilla",
+        "shortCode": "AU"
       },
       {
-        "name": "Aguas Buenas"
+        "name": "Aguas Buenas",
+        "shortCode": "AB"
       },
       {
-        "name": "Aibonito"
+        "name": "Aibonito",
+        "shortCode": "AI"
       },
       {
-        "name": "Anasco"
+        "name": "Anasco",
+        "shortCode": "AN"
       },
       {
-        "name": "Arecibo"
+        "name": "Arecibo",
+        "shortCode": "AR"
       },
       {
-        "name": "Arroyo"
+        "name": "Arroyo",
+        "shortCode": "AO"
       },
       {
-        "name": "Barceloneta"
+        "name": "Barceloneta",
+        "shortCode": "BA"
       },
       {
-        "name": "Barranquitas"
+        "name": "Barranquitas",
+        "shortCode": "BR"
       },
       {
-        "name": "Bayamon"
+        "name": "Bayamon",
+        "shortCode": "BY"
       },
       {
-        "name": "Cabo Rojo"
+        "name": "Cabo Rojo",
+        "shortCode": "CR"
       },
       {
-        "name": "Caguas"
+        "name": "Caguas",
+        "shortCode": "CA"
       },
       {
-        "name": "Camuy"
+        "name": "Camuy",
+        "shortCode": "CM"
       },
       {
-        "name": "Canovanas"
+        "name": "Canovanas",
+        "shortCode": "CN"
       },
       {
-        "name": "Carolina"
+        "name": "Carolina",
+        "shortCode": "CL"
       },
       {
-        "name": "Cat"
+        "name": "Cat",
+        "shortCode": "CT"
       },
       {
-        "name": "Ceiba"
+        "name": "Ceiba",
+        "shortCode": "CB"
       },
       {
-        "name": "Ciales"
+        "name": "Ciales",
+        "shortCode": "CE"
       },
       {
-        "name": "Cidra"
+        "name": "Cidra",
+        "shortCode": "CD"
       },
       {
-        "name": "Coamo"
+        "name": "Coamo",
+        "shortCode": "CO"
       },
       {
-        "name": "Comerio"
+        "name": "Comerio",
+        "shortCode": "CI"
       },
       {
-        "name": "Corozal"
+        "name": "Corozal",
+        "shortCode": "CZ"
       },
       {
-        "name": "Culebra"
+        "name": "Culebra",
+        "shortCode": "CU"
       },
       {
-        "name": "Dorado"
+        "name": "Dorado",
+        "shortCode": "DO"
       },
       {
-        "name": "Fajardo"
+        "name": "Fajardo",
+        "shortCode": "FA"
       },
       {
-        "name": "Florida"
+        "name": "Florida",
+        "shortCode": "FL"
       },
       {
-        "name": "Guanica"
+        "name": "Guanica",
+        "shortCode": "GA"
       },
       {
-        "name": "Guayama"
+        "name": "Guayama",
+        "shortCode": "GY"
       },
       {
-        "name": "Guayanilla"
+        "name": "Guayanilla",
+        "shortCode": "GN"
       },
       {
-        "name": "Guaynabo"
+        "name": "Guaynabo",
+        "shortCode": "GU"
       },
       {
-        "name": "Gurabo"
+        "name": "Gurabo",
+        "shortCode": "GB"
       },
       {
-        "name": "Hatillo"
+        "name": "Hatillo",
+        "shortCode": "HT"
       },
       {
-        "name": "Hormigueros"
+        "name": "Hormigueros",
+        "shortCode": "HO"
       },
       {
-        "name": "Humacao"
+        "name": "Humacao",
+        "shortCode": "HM"
       },
       {
-        "name": "Isabe"
+        "name": "Isabe",
+        "shortCode": "IS"
       },
       {
-        "name": "Juana Diaz"
+        "name": "Juana Diaz",
+        "shortCode": "JD"
       },
       {
-        "name": "Juncos"
+        "name": "Juncos",
+        "shortCode": "JU"
       },
       {
-        "name": "Lajas"
+        "name": "Lajas",
+        "shortCode": "LJ"
       },
       {
-        "name": "Lares"
+        "name": "Lares",
+        "shortCode": "LR"
       },
       {
-        "name": "Las Marias"
+        "name": "Las Marias",
+        "shortCode": "LM"
       },
       {
-        "name": "Las oiza"
+        "name": "Las oiza",
+        "shortCode": "LO"
       },
       {
-        "name": "Luquillo"
+        "name": "Luquillo",
+        "shortCode": "LQ"
       },
       {
-        "name": "Manati"
+        "name": "Manati",
+        "shortCode": "MN"
       },
       {
-        "name": "Maricao"
+        "name": "Maricao",
+        "shortCode": "MR"
       },
       {
-        "name": "Maunabo"
+        "name": "Maunabo",
+        "shortCode": "MU"
       },
       {
-        "name": "Mayaguez"
+        "name": "Mayaguez",
+        "shortCode": "MY"
       },
       {
-        "name": "Moca"
+        "name": "Moca",
+        "shortCode": "MO"
       },
       {
-        "name": "Morovis"
+        "name": "Morovis",
+        "shortCode": "MV"
       },
       {
-        "name": "Naguabo"
+        "name": "Naguabo",
+        "shortCode": "NG"
       },
       {
-        "name": "Naranjito"
+        "name": "Naranjito",
+        "shortCode": "NR"
       },
       {
-        "name": "Orocovis"
+        "name": "Orocovis",
+        "shortCode": "OC"
       },
       {
-        "name": "Patillas"
+        "name": "Patillas",
+        "shortCode": "PT"
       },
       {
-        "name": "Penuelas"
+        "name": "Penuelas",
+        "shortCode": "PU"
       },
       {
-        "name": "Ponce"
+        "name": "Ponce",
+        "shortCode": "PO"
       },
       {
-        "name": "Quebradillas"
+        "name": "Quebradillas",
+        "shortCode": "QB"
       },
       {
-        "name": "Rincon"
+        "name": "Rincon",
+        "shortCode": "RN"
       },
       {
-        "name": "Rio Grande"
+        "name": "Rio Grande",
+        "shortCode": "RG"
       },
       {
-        "name": "Sabana linas"
+        "name": "Sabana linas",
+        "shortCode": "SL"
       },
       {
-        "name": "San German"
+        "name": "San German",
+        "shortCode": "SG"
       },
       {
-        "name": "San Juan"
+        "name": "San Juan",
+        "shortCode": "SJ"
       },
       {
-        "name": "San Lorenzo"
+        "name": "San Lorenzo",
+        "shortCode": "SN"
       },
       {
-        "name": "San Sebastian"
+        "name": "San Sebastian",
+        "shortCode": "SS"
       },
       {
-        "name": "Santa Isabel"
+        "name": "Santa Isabel",
+        "shortCode": "SI"
       },
       {
-        "name": "Toa Alta"
+        "name": "Toa Alta",
+        "shortCode": "TA"
       },
       {
-        "name": "Toa Baja"
+        "name": "Toa Baja",
+        "shortCode": "TB"
       },
       {
-        "name": "Trujillo Alto"
+        "name": "Trujillo Alto",
+        "shortCode": "TJ"
       },
       {
-        "name": "Utuado"
+        "name": "Utuado",
+        "shortCode": "UT"
       },
       {
-        "name": "Vega Alta"
+        "name": "Vega Alta",
+        "shortCode": "VA"
       },
       {
-        "name": "Vega ues"
+        "name": "Vega ues",
+        "shortCode": "VU"
       },
       {
-        "name": "Villalba"
+        "name": "Villalba",
+        "shortCode": "VI"
       },
       {
-        "name": "Yabucoa"
+        "name": "Yabucoa",
+        "shortCode": "YB"
       },
       {
-        "name": "Yauco"
+        "name": "Yauco",
+        "shortCode": "YA"
       }
     ]
   },
