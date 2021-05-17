@@ -123,6 +123,6 @@ export default {
   <select @change="onChange($event.target.value)" :class="className" :autocomplete="autocompleteAttr">
     <option v-if="!disablePlaceholder && !removePlaceholder" value="">{{ placeholder }}</option>
     <option v-if="disablePlaceholder && !removePlaceholder" value="" disabled selected>{{ placeholder }}</option>
-    <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType]" :selected="region === place[valueType]">{{shortCodeDropdown ? place.shortCode : place.name}}</option>
+    <option v-for="(place, index) in shownRegions" v-bind:key="index" :value="place[valueType] !== '' ? place[valueType] : place.name.substring(0,3)" :selected="region === place[valueType]">{{shortCodeDropdown ? place.shortCode : place.name}}</option>
   </select>
 </template>
