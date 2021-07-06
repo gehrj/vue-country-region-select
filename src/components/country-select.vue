@@ -54,7 +54,7 @@
             return !this.blackList.includes(country.countryShortCode)
           })
         }
-        if (this.$i18n && this.usei18n) {
+        if (this.usei18n && this.$i18n) {
           countryList = countryList.map((country) => {
             let localeCountry = Object.assign({ }, country)
             localeCountry.countryName = this.$t(country.countryName)
@@ -112,7 +112,7 @@
             return region.countryShortCode === this.firstCountry
           }
         })
-        if (this.$i18n && this.usei18n) {
+        if (this.usei18n && this.$i18n) {
           return this.$t(regionObj.countryName)
         }
         return this.shortCodeDropdown ? regionObj.countryShortCode : regionObj.countryName
